@@ -4,15 +4,24 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:mocked": "NEXT_PUBLIC_API_MOCKING=enabled next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.14.1",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.1",
     "next": "13.0.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "msw": "^0.47.4"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
